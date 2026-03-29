@@ -2,7 +2,9 @@ baseURL = "https://jaimeyanes.github.io/"
 languageCode = "es-ES"
 title = "Jaime Yanes | Seguridad y Comunicaciones"
 theme = "PaperMod"
-paginate = 10
+[pagination]
+  pagerSize = 10
+
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
