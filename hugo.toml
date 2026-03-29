@@ -1,0 +1,111 @@
+baseURL = "https://jaime-yanes.github.io/"
+languageCode = "es-ES"
+title = "Jaime Yanes | Seguridad y Comunicaciones"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+# ─────────────────────────────────────────────
+#  PARÁMETROS GLOBALES DEL SITIO
+# ─────────────────────────────────────────────
+[params]
+  env           = "production"
+  author        = "Jaime Yanes"
+  description   = "Arquitecto de redes y seguridad con experiencia desplegando infraestructuras críticas en entornos empresariales. Escribo sobre lo que sé porque lo he operado."
+  keywords      = ["Seguridad de Red", "SD-WAN", "Fortinet", "Zero Trust", "SASE", "Post-Quantum", "Ciberseguridad", "Firewall"]
+  defaultTheme  = "dark"          # dark | light | auto
+  disableThemeToggle = false
+
+  # Página de inicio: modo texto (sin foto de perfil grande)
+  [params.homeInfoParams]
+    Title   = "Jaime Yanes"
+    Content = """Arquitecto de redes y seguridad con años desplegando \
+infraestructuras críticas para entornos empresariales. \
+Aquí escribo sobre lo que sé porque lo he operado: \
+firewalls, SD-WAN, Zero Trust, SASE y la convergencia entre redes y seguridad."""
+
+  # Botones de redes sociales en la home (añade los tuyos)
+  [[params.socialIcons]]
+    name = "linkedin"
+    url  = "https://linkedin.com/in/jaimeyanes"
+
+  [[params.socialIcons]]
+    name = "github"
+    url  = "https://github.com/jaimeyanes"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url  = "/index.xml"
+
+  # ── Comportamiento de los posts ──
+  ShowReadingTime       = true
+  ShowShareButtons      = false
+  ShowPostNavLinks      = true
+  ShowBreadCrumbs       = true
+  ShowCodeCopyButtons   = true
+  ShowWordCount         = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc            = true
+  hidemeta              = false
+  hideSummary           = false
+  showtoc               = true
+  tocopen               = false
+  comments              = false
+  disableScrollToTop    = false
+
+  # ── Cover image por defecto (opcional) ──
+  [params.cover]
+    hidden      = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  # ── Label superior izquierdo ──
+  [params.label]
+    text = "Jaime Yanes"
+
+# ─────────────────────────────────────────────
+#  MENÚ DE NAVEGACIÓN
+# ─────────────────────────────────────────────
+[[menus.main]]
+  identifier = "blog"
+  name       = "Blog"
+  url        = "/posts/"
+  weight     = 10
+
+[[menus.main]]
+  identifier = "portfolio"
+  name       = "Porfolio"
+  url        = "/portfolio/"
+  weight     = 20
+
+[[menus.main]]
+  identifier = "sobre-mi"
+  name       = "Sobre mí"
+  url        = "/sobre-mi/"
+  weight     = 30
+
+[[menus.main]]
+  identifier = "contacto"
+  name       = "Contacto"
+  url        = "/contacto/"
+  weight     = 40
+
+# ─────────────────────────────────────────────
+#  TAXONOMÍAS (categorías y etiquetas)
+# ─────────────────────────────────────────────
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+  series   = "series"
+
+# ─────────────────────────────────────────────
+#  OUTPUTS (necesario para la búsqueda de PaperMod)
+# ─────────────────────────────────────────────
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
