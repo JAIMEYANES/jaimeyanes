@@ -15,34 +15,27 @@ buildFuture = false
   minifyOutput = true
 
 # ─────────────────────────────────────────────
-#  PARÁMETROS GLOBALES Y ESTILO SENIOR
+#  PARÁMETROS GLOBALES Y ESTILO
 # ─────────────────────────────────────────────
 [params]
   env             = "production"
   author          = "Jaime Yanes"
-  description     = "Arquitecto de redes y seguridad con experiencia desplegando infraestructuras críticas en entornos empresariales."
-  keywords        = ["Seguridad de Red", "SD-WAN", "Fortinet", "Zero Trust", "SASE", "Post-Quantum", "Ciberseguridad", "Firewall"]
+  description     = "Arquitecto de redes y seguridad | Fortinet, Cisco, Palo Alto"
+  keywords        = ["Seguridad de Red", "SD-WAN", "Fortinet", "Zero Trust", "SASE"]
   
-  # --- Configuración Visual para que NO sea soso ---
   defaultTheme    = "dark"
-  disableThemeToggle = true # Bloqueado en dark para más autoridad
-  
-  # Paleta de colores técnica (Gris Azulado + Azul Eléctrico)
-  assets = { disableHLJS = false }
-  style = {
-    bg = "#111827"          # Fondo gris oscuro profundo
-    fg = "#d1d5db"          # Texto principal suave
-    accent = "#3b82f6"      # Azul "Cisco/Fortinet" para enlaces
-    card_bg = "#1f2937"     # Fondo de las tarjetas de post
-  }
+  disableThemeToggle = true 
 
-  # Página de inicio: modo texto
+  # --- Ajustes de color para que no sea soso ---
+  # Estos nombres de variables son los que PaperMod reconoce directamente
+  bg = "#111827"
+  fg = "#d1d5db"
+  accent = "#3b82f6"
+
+  # Página de inicio
   [params.homeInfoParams]
     Title   = "Jaime Yanes"
-    Content = """Arquitecto de redes y seguridad con años desplegando \
-infraestructuras críticas para entornos empresariales. \
-Aquí escribo sobre lo que sé porque lo he operado: \
-firewalls, SD-WAN, Zero Trust, SASE y la convergencia entre redes y seguridad."""
+    Content = "Arquitecto de redes y seguridad con años desplegando infraestructuras críticas. Escribo sobre lo que sé porque lo he operado: firewalls, SD-WAN, Zero Trust, SASE y la convergencia entre redes y seguridad."
 
   # Iconos sociales
   [[params.socialIcons]]
@@ -51,9 +44,6 @@ firewalls, SD-WAN, Zero Trust, SASE y la convergencia entre redes y seguridad.""
   [[params.socialIcons]]
     name = "github"
     url  = "https://github.com/jaime-yanes"
-  [[params.socialIcons]]
-    name = "rss"
-    url  = "/index.xml"
 
   # Comportamiento de los posts
   ShowReadingTime       = true
@@ -61,9 +51,7 @@ firewalls, SD-WAN, Zero Trust, SASE y la convergencia entre redes y seguridad.""
   ShowPostNavLinks      = true
   ShowBreadCrumbs       = true
   ShowCodeCopyButtons   = true
-  ShowWordCount         = false
   UseHugoToc            = true
-  showtoc               = true
 
   [params.label]
     text = "Jaime Yanes"
@@ -96,14 +84,11 @@ firewalls, SD-WAN, Zero Trust, SASE y la convergencia entre redes y seguridad.""
   weight     = 40
 
 # ─────────────────────────────────────────────
-#  CONFIGURACIÓN TÉCNICA (Taxonomías y Markup)
+#  CONFIGURACIÓN TÉCNICA
 # ─────────────────────────────────────────────
 [taxonomies]
   category = "categories"
   tag      = "tags"
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
 
 [markup]
   [markup.goldmark]
